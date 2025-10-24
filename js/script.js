@@ -301,3 +301,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
 console.log('Script loaded successfully');
 
+/* ============================================
+   Mobile Navigation (Hamburger Menu)
+   ============================================ */
+document.addEventListener('DOMContentLoaded', function() {
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.nav');
+
+    if (navToggle && nav) {
+        // ハンバーガーアイコンをクリックした時の処理
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('nav-active');
+            this.classList.toggle('active');
+        });
+
+        // メニューのリンクをクリックした時にメニューを閉じる
+        nav.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('nav-active');
+                navToggle.classList.remove('active');
+            });
+        });
+    }
+});
