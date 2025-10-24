@@ -797,3 +797,93 @@ body {
     }
 }
 
+/* ============================================
+   Hamburger Menu Styles
+   ============================================ */
+.nav-toggle {
+    display: none; /* PCでは非表示 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 25px;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+
+/* ============================================
+   スマホ向けメニューバーの調整（768px以下）
+   ============================================ */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block; /* スマホで表示 */
+    }
+
+    .nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* 初期状態では画面の外に隠す */
+        width: 70%;
+        height: 100vh;
+        background: rgba(0, 34, 68, 0.95); /* 少し透過した紺色 */
+        backdrop-filter: blur(5px);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: right 0.4s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* メニューが開いた時のスタイル */
+    .nav.nav-active {
+        right: 0; /* 画面内に表示 */
+    }
+
+    .nav-link {
+        font-size: 18px;
+        opacity: 1;
+    }
+
+    /* ハンバーガーアイコンが開いた時のアニメーション */
+    .nav-toggle.active .hamburger {
+        background: transparent;
+    }
+
+    .nav-toggle.active .hamburger::before {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .nav-toggle.active .hamburger::after {
+        transform: rotate(-45deg);
+        bottom: 0;
+    }
+}
