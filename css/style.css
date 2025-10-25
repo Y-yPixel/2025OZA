@@ -852,7 +852,7 @@ body {
         right: -100%; /* 初期状態では画面の外に隠す */
         width: 40%;
         height: 100vh;
-        background: rgba(0, 34, 68, 0.6); /* 少し透過した紺色 */
+        background: rgba(0, 34, 68, 0.75); /* 少し透過した紺色 */
         backdrop-filter: blur(5px);
         flex-direction: column;
         align-items: center;
