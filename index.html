@@ -25,6 +25,7 @@
             <nav class="nav">
                 <a href="#home" class="nav-link active">ホーム</a>
                 <a href="#overview" class="nav-link">概要</a>
+                <a href="#schedule" class="nav-link">スケジュール</a>
                 <a href="#event" class="nav-link">大会詳細</a>
                 <a href="#hotels" class="nav-link">宿泊先</a>
                 <a href="#precautions" class="nav-link">注意事項</a>
@@ -134,6 +135,7 @@
                 <div class="info-item">
                     <strong>参加者</strong>
                     <p>男子13名（団体参加）</p>
+                    <button class="btn btn-secondary" id="participantsBtn" style="margin-top: 10px; cursor: pointer;">参加者一覧を表示</button>
                 </div>
                 <div class="info-item">
                     <strong>目的地</strong>
@@ -170,7 +172,7 @@
             </div>
         </div>
 
-        <div class="schedule">
+        <div class="schedule" id="schedule">
             <h3>タイムスケジュール</h3>
             <div class="timeline">
                 <div class="timeline-item">
@@ -528,6 +530,29 @@
             </div>
         </div>
     </footer>
+
+    <!-- Participants Modal -->
+    <div id="participantsModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2>参加者一覧</h2>
+            <div class="participants-list">
+                <div class="participant-item">森住俊祐</div>
+                <div class="participant-item">大河内悠成</div>
+                <div class="participant-item">樫村太陽</div>
+                <div class="participant-item">宮良由宇土</div>
+                <div class="participant-item">増田啓吾</div>
+                <div class="participant-item">小山巧豊</div>
+                <div class="participant-item">小泉達也</div>
+                <div class="participant-item">菅沼貴博</div>
+                <div class="participant-item">八尋泰司</div>
+                <div class="participant-item">中澤篤軌</div>
+                <div class="participant-item">増田雄介</div>
+                <div class="participant-item">油井蔵之介</div>
+                <div class="participant-item" style="color: #666; font-style: italic;">(介添え: 山﨑悠楓)</div>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>

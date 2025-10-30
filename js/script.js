@@ -299,11 +299,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// ============================================
+// Participants Modal
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const participantsBtn = document.getElementById('participantsBtn');
+    const participantsModal = document.getElementById('participantsModal');
+    const closeModal = document.getElementById('closeModal');
+
+    // Open modal
+    if (participantsBtn) {
+        participantsBtn.addEventListener('click', function() {
+            participantsModal.style.display = 'block';
+        });
+    }
+
+    // Close modal when X is clicked
+    if (closeModal) {
+        closeModal.addEventListener('click', function() {
+            participantsModal.style.display = 'none';
+        });
+    }
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === participantsModal) {
+            participantsModal.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && participantsModal.style.display === 'block') {
+            participantsModal.style.display = 'none';
+        }
+    });
+});
+
 console.log('Script loaded successfully');
 
-/* ============================================
-   Mobile Navigation (Hamburger Menu)
-   ============================================ */
+// ============================================
+// Mobile Navigation (Hamburger Menu)
+// ============================================
 document.addEventListener('DOMContentLoaded', function() {
     const navToggle = document.querySelector('.nav-toggle');
     const nav = document.querySelector('.nav');
