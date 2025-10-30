@@ -75,7 +75,7 @@
                         <p>神宮弓道場</p>
                         <small>三重県伊勢市</small>
                     </div>
-                    <div class="card">
+                    <div class="card" id="teamPhotoBtn" style="cursor: pointer;">
                         <div class="card-icon">👥</div>
                         <h3>参加者</h3>
                         <p>男子13名</p>
@@ -530,6 +530,14 @@
             </div>
         </div>
     </footer>
+
+    <!-- Team Photo Modal -->
+    <div id="teamPhotoModal" class="modal" style="display: none;">
+        <div class="modal-content modal-photo">
+            <span class="modal-close" id="closePhotoModal">&times;</span>
+            <img src="team-photo.jpg" alt="Keio Archery Club Team Photo" style="width: 100%; height: auto; border-radius: 8px;">
+        </div>
+    </div>
 
     <!-- Participants Modal -->
     <div id="participantsModal" class="modal" style="display: none;">
