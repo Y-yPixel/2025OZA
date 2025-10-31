@@ -304,7 +304,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
     const PhotoBtn = document.getElementById('PhotoBtn');
-    const PhotoModal = document.getElementById('PhotoModal');
+    const PhotoModal = document.getElementByClassName('card-icon');
     const closePhotoModal = document.getElementById('closePhotoModal');
 
     // Open modal
