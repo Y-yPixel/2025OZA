@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add print button if needed
     const printButton = document.createElement('button');
     printButton.id = 'printBtn';
-    printButton.innerHTML = '🖨️ 印刷';
+    printButton.innerHTML = '印刷';
     printButton.style.cssText = `
         position: fixed;
         bottom: 90px;
@@ -300,38 +300,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// Team Photo Modal
+// Photo Modal
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    const teamPhotoBtn = document.getElementById('teamPhotoBtn');
-    const teamPhotoModal = document.getElementById('teamPhotoModal');
+    const PhotoBtn = document.getElementById('PhotoBtn');
+    const PhotoModal = document.getElementById('PhotoModal');
     const closePhotoModal = document.getElementById('closePhotoModal');
 
     // Open modal
-    if (teamPhotoBtn) {
-        teamPhotoBtn.addEventListener('click', function() {
-            teamPhotoModal.style.display = 'block';
+    if (PhotoBtn) {
+        PhotoBtn.addEventListener('click', function() {
+            PhotoModal.style.display = 'block';
         });
     }
 
     // Close modal when X is clicked
     if (closePhotoModal) {
         closePhotoModal.addEventListener('click', function() {
-            teamPhotoModal.style.display = 'none';
+            PhotoModal.style.display = 'none';
         });
     }
 
     // Close modal when clicking outside of it
     window.addEventListener('click', function(event) {
-        if (event.target === teamPhotoModal) {
-            teamPhotoModal.style.display = 'none';
+        if (event.target === PhotoModal) {
+            PhotoModal.style.display = 'none';
         }
     });
 
     // Close modal with Escape key
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && teamPhotoModal.style.display === 'block') {
-            teamPhotoModal.style.display = 'none';
+        if (event.key === 'Escape' && PhotoModal.style.display === 'block') {
+            PhotoModal.style.display = 'none';
         }
     });
 });
