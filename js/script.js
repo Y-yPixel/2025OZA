@@ -300,38 +300,112 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // ============================================
-// Photo Modal
+// Photo Modal - Venue (PhotoBtn-1)
 // ============================================
 document.addEventListener('DOMContentLoaded', function() {
-    const PhotoBtn = document.getElementById('PhotoBtn');
-    const PhotoModal = document.getElementByClassName('card-icon');
-    const closePhotoModal = document.getElementById('closePhotoModal');
+    const PhotoBtn1 = document.getElementById('PhotoBtn-1');
+    const PhotoModal1 = document.getElementById('PhotoModal-1');
+    const closePhotoModal1 = PhotoModal1 ? PhotoModal1.querySelector('.modal-close') : null;
 
     // Open modal
-    if (PhotoBtn) {
-        PhotoBtn.addEventListener('click', function() {
-            PhotoModal.style.display = 'block';
+    if (PhotoBtn1) {
+        PhotoBtn1.addEventListener('click', function() {
+            PhotoModal1.style.display = 'block';
         });
     }
 
     // Close modal when X is clicked
-    if (closePhotoModal) {
-        closePhotoModal.addEventListener('click', function() {
-            PhotoModal.style.display = 'none';
+    if (closePhotoModal1) {
+        closePhotoModal1.addEventListener('click', function() {
+            PhotoModal1.style.display = 'none';
         });
     }
 
     // Close modal when clicking outside of it
     window.addEventListener('click', function(event) {
-        if (event.target === PhotoModal) {
-            PhotoModal.style.display = 'none';
+        if (event.target === PhotoModal1) {
+            PhotoModal1.style.display = 'none';
         }
     });
 
     // Close modal with Escape key
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape' && PhotoModal.style.display === 'block') {
-            PhotoModal.style.display = 'none';
+        if (event.key === 'Escape' && PhotoModal1.style.display === 'block') {
+            PhotoModal1.style.display = 'none';
+        }
+    });
+});
+
+// ============================================
+// Photo Modal - Team (PhotoBtn-2)
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const PhotoBtn2 = document.getElementById('PhotoBtn-2');
+    const PhotoModal2 = document.getElementById('PhotoModal-2');
+    const closePhotoModal2 = PhotoModal2 ? PhotoModal2.querySelector('.modal-close') : null;
+
+    // Open modal
+    if (PhotoBtn2) {
+        PhotoBtn2.addEventListener('click', function() {
+            PhotoModal2.style.display = 'block';
+        });
+    }
+
+    // Close modal when X is clicked
+    if (closePhotoModal2) {
+        closePhotoModal2.addEventListener('click', function() {
+            PhotoModal2.style.display = 'none';
+        });
+    }
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === PhotoModal2) {
+            PhotoModal2.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && PhotoModal2.style.display === 'block') {
+            PhotoModal2.style.display = 'none';
+        }
+    });
+});
+
+// ============================================
+// Photo Modal - Hotel (PhotoBtn-3)
+// ============================================
+document.addEventListener('DOMContentLoaded', function() {
+    const PhotoBtn3 = document.getElementById('PhotoBtn-3');
+    const PhotoModal3 = document.getElementById('PhotoModal-3');
+    const closePhotoModal3 = PhotoModal3 ? PhotoModal3.querySelector('.modal-close') : null;
+
+    // Open modal
+    if (PhotoBtn3) {
+        PhotoBtn3.addEventListener('click', function() {
+            PhotoModal3.style.display = 'block';
+        });
+    }
+
+    // Close modal when X is clicked
+    if (closePhotoModal3) {
+        closePhotoModal3.addEventListener('click', function() {
+            PhotoModal3.style.display = 'none';
+        });
+    }
+
+    // Close modal when clicking outside of it
+    window.addEventListener('click', function(event) {
+        if (event.target === PhotoModal3) {
+            PhotoModal3.style.display = 'none';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && PhotoModal3.style.display === 'block') {
+            PhotoModal3.style.display = 'none';
         }
     });
 });
